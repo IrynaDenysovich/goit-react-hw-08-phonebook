@@ -1,18 +1,18 @@
 import { Box } from '@mui/material';
-import { PhonebookFilter } from 'Components/PhonebookFilter';
-import { PhonebookForm } from 'Components/PhonebookForm';
-import { PhonebookList } from 'Components/PhonebookList';
-import { PhonebookSkeletonList } from 'Components/PhonebookSkeletonList';
-import { Template } from 'Components/Template';
+import { PhonebookFilter } from '../Components/PhonebookFilter';
+import { PhonebookForm } from '../Components/PhonebookForm';
+import { PhonebookList } from '../Components/PhonebookList';
+import { PhonebookSkeletonList } from '../Components/PhonebookSkeletonList';
+import { Template } from '../Components/Template';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Navigate } from 'react-router-dom';
-import { contactsGet } from 'Reducers/Api';
+import { contactsGet } from '../Reducers/Api';
 import {
   selectorAuthToken,
   selectorContactLoading,
   selectorContacts,
-} from 'Reducers/Selectors';
+} from '../Reducers/Selectors';
 
 export function ContactsPage() {
   const dispatch = useDispatch();

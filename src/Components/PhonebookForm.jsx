@@ -7,8 +7,8 @@ import {
   TextField,
 } from '@mui/material';
 import { useDispatch, useSelector } from 'react-redux';
-import { contactsAdd } from 'Reducers/Api';
-import { contactsError } from 'Reducers/ContactsSlice';
+import { contactsAdd } from '../Reducers/Api';
+import { contactsError } from '../Reducers/ContactsSlice';
 import {
   selectorAuthToken,
   selectorContactError,

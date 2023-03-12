@@ -1,8 +1,8 @@
-import { ContactsPage } from 'Pages/ContactsPage';
-import { HomePage } from 'Pages/HomePage';
-import { LoginPage } from 'Pages/LoginPage';
-import { RegisterPage } from 'Pages/RegisterPage';
 import { Navigate, Route, Routes } from 'react-router-dom';
+import { HomePage } from '../Pages/HomePage';
+import { RegisterPage } from '../Pages/RegisterPage';
+import { LoginPage } from '../Pages/LoginPage';
+import { ContactsPage } from '../Pages/ContactsPage';
 
 export function App() {
   return (

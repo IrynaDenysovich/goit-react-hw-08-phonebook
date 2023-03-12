@@ -1,5 +1,5 @@
 import { Box } from '@mui/material';
-import { Template } from 'Components/Template';
+import { Template } from '../Components/Template';
 
 export function HomePage() {
   return (

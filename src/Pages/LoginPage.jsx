@@ -16,14 +16,14 @@ import {
 } from '@mui/material';
 
 import { useDispatch, useSelector } from 'react-redux';
-import { authLogin } from 'Reducers/Api';
+import { authLogin } from '../Reducers/Api';
 import {
   selectorAuthError,
   selectorAuthLoading,
   selectorAuthToken,
-} from 'Reducers/Selectors';
-import { resetError } from 'Reducers/AuthSlice';
-import { Template } from 'Components/Template';
+} from '../Reducers/Selectors';
+import { resetError } from '../Reducers/AuthSlice';
+import { Template } from '../Components/Template';
 
 export function LoginPage({ redirect }) {
   const navigate = useNavigate();

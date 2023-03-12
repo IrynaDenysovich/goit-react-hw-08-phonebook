@@ -19,11 +19,11 @@ import {
   selectorAuthError,
   selectorAuthLoading,
   selectorAuthToken,
-} from 'Reducers/Selectors';
+} from '../Reducers/Selectors';
 
-import { authSignup } from 'Reducers/Api';
-import { resetError } from 'Reducers/AuthSlice';
-import { Template } from 'Components/Template';
+import { authSignup } from '../Reducers/Api';
+import { resetError } from '../Reducers/AuthSlice';
+import { Template } from '../Components/Template';
 
 export function RegisterPage({ redirect }) {
   const navigate = useNavigate();

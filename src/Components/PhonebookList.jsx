@@ -14,9 +14,9 @@ import {
   selectorAuthToken,
   selectorFilter,
   selectorRemoveContanctIndex,
-} from 'Reducers/Selectors';
-import { predictRemove } from 'Reducers/ContactsSlice';
-import { contactsDelete } from 'Reducers/Api';
+} from '../Reducers/Selectors';
+import { predictRemove } from '../Reducers/ContactsSlice';
+import { contactsDelete } from '../Reducers/Api';
 import { PhonebookSkeletonList } from './PhonebookSkeletonList';
 import { PhonebookListItem } from './PhonebookListItem';
 import { ConfirmWindow } from './ConfirmWindow';
