@@ -8,7 +8,7 @@ import { Store } from './Reducers/Store';
 import { App } from './Components/App';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <BrowserRouter>
+  <BrowserRouter basename="/goit-react-hw-08-phonebook">
     <Provider store={Store}>
       <App />
     </Provider>
