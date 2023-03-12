@@ -1,12 +1,4 @@
-import {
-  Alert,
-  Box,
-  CssBaseline,
-  Divider,
-  List,
-  Typography,
-} from '@mui/material';
-
+import PropTypes from 'prop-types';
 import { PhonebookSkeleton } from './PhonebookSkeleton';
 import { useDispatch, useSelector } from 'react-redux';
 import {
@@ -15,6 +7,14 @@ import {
   selectorFilter,
   selectorRemoveContanctIndex,
 } from '../Reducers/Selectors';
+import {
+  Alert,
+  Box,
+  CssBaseline,
+  Divider,
+  List,
+  Typography,
+} from '@mui/material';
 import { predictRemove } from '../Reducers/ContactsSlice';
 import { contactsDelete } from '../Reducers/Api';
 import { PhonebookSkeletonList } from './PhonebookSkeletonList';
@@ -84,3 +84,13 @@ export function PhonebookList({ contacts }) {
     </Box>
   );
 }
+
+PhonebookList.propTypes = {
+  contacts: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+      number: PropTypes.string.isRequired,
+    })
+  ),
+};

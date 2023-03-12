@@ -6,6 +6,7 @@ import {
   DialogContentText,
   DialogTitle,
 } from '@mui/material';
+import PropTypes from 'prop-types';
 
 export const ConfirmWindow = ({ agree, disagree, open }) => {
   return (
@@ -29,4 +30,10 @@ export const ConfirmWindow = ({ agree, disagree, open }) => {
       </DialogActions>
     </Dialog>
   );
+};
+
+ConfirmWindow.propTypes = {
+  agree: PropTypes.func.isRequired,
+  disagree: PropTypes.func.isRequired,
+  open: PropTypes.bool.isRequired,
 };

@@ -1,5 +1,6 @@
 import { Box, CssBaseline, List } from '@mui/material';
 import { PhonebookSkeleton } from './PhonebookSkeleton';
+import PropTypes from 'prop-types';
 
 export function PhonebookSkeletonList({ number, width = '50%' }) {
   const items = Array.from({ length: number });
@@ -21,3 +22,8 @@ export function PhonebookSkeletonList({ number, width = '50%' }) {
     </Box>
   );
 }
+
+PhonebookSkeletonList.propTypes = {
+  number: PropTypes.number.isRequired,
+  width: PropTypes.string,
+};

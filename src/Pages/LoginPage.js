@@ -2,6 +2,11 @@ import { useNavigate } from 'react-router-dom';
 import Button from '@mui/material/Button';
 import { useEffect } from 'react';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
+import { useDispatch, useSelector } from 'react-redux';
+import { authLogin } from '../Reducers/Api';
+import { resetError } from '../Reducers/AuthSlice';
+import { Template } from '../Components/Template';
+import PropTypes from 'prop-types';
 import {
   Alert,
   Avatar,
@@ -14,16 +19,11 @@ import {
   TextField,
   Typography,
 } from '@mui/material';
-
-import { useDispatch, useSelector } from 'react-redux';
-import { authLogin } from '../Reducers/Api';
 import {
   selectorAuthError,
   selectorAuthLoading,
   selectorAuthToken,
 } from '../Reducers/Selectors';
-import { resetError } from '../Reducers/AuthSlice';
-import { Template } from '../Components/Template';
 
 export function LoginPage({ redirect }) {
   const navigate = useNavigate();
@@ -136,3 +136,7 @@ export function LoginPage({ redirect }) {
     </Template>
   );
 }
+
+LoginPage.propTypes = {
+  redirect: PropTypes.string.isRequired,
+};

@@ -20,6 +20,7 @@ import {
   selectorAuthLoading,
   selectorAuthToken,
 } from '../Reducers/Selectors';
+import PropTypes from 'prop-types';
 
 import { authSignup } from '../Reducers/Api';
 import { resetError } from '../Reducers/AuthSlice';
@@ -154,3 +155,7 @@ export function RegisterPage({ redirect }) {
     </Template>
   );
 }
+
+RegisterPage.propTypes = {
+  redirect: PropTypes.string.isRequired,
+};

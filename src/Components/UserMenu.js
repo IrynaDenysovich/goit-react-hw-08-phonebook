@@ -8,6 +8,7 @@ import { selectorAuthToken, selectorAuthUser } from '../Reducers/Selectors';
 import { MobileButton } from './MobileButton';
 import { MobileNavigateButton } from './MobileNavigateButton';
 import { NavigateButton } from './NavigateButton';
+import PropTypes from 'prop-types';
 
 export function UserMenu({ type }) {
   const dispatch = useDispatch();
@@ -65,3 +66,7 @@ export function UserMenu({ type }) {
       return <Typography>default</Typography>;
   }
 }
+
+UserMenu.propTypes = {
+  type: PropTypes.string.isRequired,
+};

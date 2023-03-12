@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { Button } from '@mui/material';
 import { useLocation, useNavigate } from 'react-router-dom';
 
@@ -16,4 +17,9 @@ export const NavigateButton = ({ name, to }) => {
       {name}
     </Button>
   );
+};
+
+NavigateButton.propTypes = {
+  name: PropTypes.string.isRequired,
+  to: PropTypes.string.isRequired,
 };
