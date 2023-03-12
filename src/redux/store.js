@@ -3,7 +3,7 @@ import { authReducer } from './AuthSlice';
 import { filtersReducer } from './FilterSlice';
 import { contactsReducer } from './ContactsSlice';
 
-export const store = configureStore({
+export const Store = configureStore({
   reducer: {
     contacts: contactsReducer,
     filter: filtersReducer,
