@@ -100,7 +100,6 @@ export function LoginPage({ redirect }) {
                 id="password"
                 autoComplete="current-password"
               />
-              {error.length > 0 && <Alert severity="warning">{error}</Alert>}
               {/* <FormControlLabel
                 control={
                   <Checkbox value="remember" name="remember" color="primary" />
@@ -115,6 +114,7 @@ export function LoginPage({ redirect }) {
               >
                 {isLoading ? <CircularProgress color="inherit" /> : 'Sign In'}
               </Button>
+              {error.length > 0 && <Alert severity="warning">{error}</Alert>}
               <Grid
                 container
                 sx={{ justifyContent: 'center', cursor: 'pointer' }}

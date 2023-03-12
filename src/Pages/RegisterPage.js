@@ -126,11 +126,7 @@ export function RegisterPage({ redirect }) {
                   />
                 </Grid>
               </Grid>
-              {error.length > 0 && (
-                <Alert sx={{ mt: 3 }} severity="warning">
-                  {error}
-                </Alert>
-              )}
+
               <Button
                 type="submit"
                 fullWidth
@@ -139,6 +135,11 @@ export function RegisterPage({ redirect }) {
               >
                 {isLoading ? <CircularProgress color="inherit" /> : 'Sign Up'}
               </Button>
+              {error.length > 0 && (
+                <Alert sx={{ mt: 3 }} severity="warning">
+                  {error}
+                </Alert>
+              )}
               <Grid container justifyContent="center">
                 <Grid item>
                   <Link href="#" variant="body2" onClick={redirectHandle}>
