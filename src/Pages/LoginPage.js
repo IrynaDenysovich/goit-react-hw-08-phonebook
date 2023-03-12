@@ -114,7 +114,11 @@ export function LoginPage({ redirect }) {
               >
                 {isLoading ? <CircularProgress color="inherit" /> : 'Sign In'}
               </Button>
-              {error.length > 0 && <Alert severity="warning">{error}</Alert>}
+              {error.length > 0 && (
+                <Alert sx={{ mb: 3 }} severity="warning">
+                  {error}
+                </Alert>
+              )}
               <Grid
                 container
                 sx={{ justifyContent: 'center', cursor: 'pointer' }}
