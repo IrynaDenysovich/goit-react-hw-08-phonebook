@@ -1,29 +1,17 @@
-import { ContactForm } from './ContactForm/ContactForm';
-import { ContactList } from './ContactList/ContactList';
-import { Filter } from './Filter/Filter';
-import { Toaster } from 'react-hot-toast';
+import { ContactsPage } from 'Pages/ContactsPage';
+import { HomePage } from 'Pages/HomePage';
+import { LoginPage } from 'Pages/LoginPage';
+import { RegisterPage } from 'Pages/RegisterPage';
+import { Navigate, Route, Routes } from 'react-router-dom';
 
 export function App() {
   return (
-    <div
-      style={{
-        fontFamily: 'sans-serif',
-        // height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101',
-        flexDirection: 'column',
-      }}
-    >
-      <h1>Phonebook</h1>
-      <ContactForm></ContactForm>
-
-      <h2>Contacts</h2>
-      <Filter></Filter>
-      <ContactList></ContactList>
-      <Toaster />
-    </div>
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/register" element={<RegisterPage redirect="/contacts" />} />
+      <Route path="/login" element={<LoginPage redirect="/contacts" />} />
+      <Route path="/contacts" element={<ContactsPage />} />
+      <Route path="*" element={<Navigate to="/" replace />} />
+    </Routes>
   );
 }
