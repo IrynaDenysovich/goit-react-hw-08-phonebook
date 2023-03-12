@@ -2,9 +2,9 @@ import { Button, List, Typography } from '@mui/material';
 
 import { Box } from '@mui/system';
 import { useDispatch, useSelector } from 'react-redux';
-import { authLogout } from 'Redux/AuthSlice';
-import { contactsReset } from 'Redux/ContactsSlice';
-import { selectorAuthToken, selectorAuthUser } from 'Redux/Selectors';
+import { authLogout } from 'Reducers/AuthSlice';
+import { contactsReset } from 'Reducers/ContactsSlice';
+import { selectorAuthToken, selectorAuthUser } from 'Reducers/Selectors';
 import { MobileButton } from './MobileButton';
 import { MobileNavigateButton } from './MobileNavigateButton';
 import { NavigateButton } from './NavigateButton';

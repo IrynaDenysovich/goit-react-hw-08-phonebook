@@ -14,9 +14,9 @@ import {
   selectorAuthToken,
   selectorFilter,
   selectorRemoveContanctIndex,
-} from 'Redux/Selectors';
-import { predictRemove } from 'Redux/ContactsSlice';
-import { contactsDelete } from 'Redux/Api';
+} from 'Reducers/Selectors';
+import { predictRemove } from 'Reducers/ContactsSlice';
+import { contactsDelete } from 'Reducers/Api';
 import { PhonebookSkeletonList } from './PhonebookSkeletonList';
 import { PhonebookListItem } from './PhonebookListItem';
 import { ConfirmWindow } from './ConfirmWindow';

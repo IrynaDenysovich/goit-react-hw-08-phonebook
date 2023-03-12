@@ -7,12 +7,12 @@ import { Template } from 'Components/Template';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Navigate } from 'react-router-dom';
-import { contactsGet } from 'Redux/Api';
+import { contactsGet } from 'Reducers/Api';
 import {
   selectorAuthToken,
   selectorContactLoading,
   selectorContacts,
-} from 'Redux/Selectors';
+} from 'Reducers/Selectors';
 
 export function ContactsPage() {
   const dispatch = useDispatch();

@@ -16,13 +16,13 @@ import {
 } from '@mui/material';
 
 import { useDispatch, useSelector } from 'react-redux';
-import { authLogin } from 'Redux/Api';
+import { authLogin } from 'Reducers/Api';
 import {
   selectorAuthError,
   selectorAuthLoading,
   selectorAuthToken,
-} from 'Redux/Selectors';
-import { resetError } from 'Redux/AuthSlice';
+} from 'Reducers/Selectors';
+import { resetError } from 'Reducers/AuthSlice';
 import { Template } from 'Components/Template';
 
 export function LoginPage({ redirect }) {

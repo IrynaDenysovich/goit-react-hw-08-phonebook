@@ -19,10 +19,10 @@ import {
   selectorAuthError,
   selectorAuthLoading,
   selectorAuthToken,
-} from 'Redux/Selectors';
+} from 'Reducers/Selectors';
 
-import { authSignup } from 'Redux/Api';
-import { resetError } from 'Redux/AuthSlice';
+import { authSignup } from 'Reducers/Api';
+import { resetError } from 'Reducers/AuthSlice';
 import { Template } from 'Components/Template';
 
 export function RegisterPage({ redirect }) {

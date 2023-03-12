@@ -1,8 +1,8 @@
 import { Box, TextField } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
 import { useDispatch, useSelector } from 'react-redux';
-import { selectorFilter } from 'Redux/Selectors';
-import { setFilter } from 'Redux/FilterSlice';
+import { selectorFilter } from 'Reducers/Selectors';
+import { setFilter } from 'Reducers/FilterSlice';
 
 export function PhonebookFilter() {
   const dispatch = useDispatch();

@@ -7,13 +7,13 @@ import {
   TextField,
 } from '@mui/material';
 import { useDispatch, useSelector } from 'react-redux';
-import { contactsAdd } from 'Redux/Api';
-import { contactsError } from 'Redux/ContactsSlice';
+import { contactsAdd } from 'Reducers/Api';
+import { contactsError } from 'Reducers/ContactsSlice';
 import {
   selectorAuthToken,
   selectorContactError,
   selectorContactExists,
-} from 'Redux/Selectors';
+} from 'Reducers/Selectors';
 
 export function PhonebookForm() {
   const dispatch = useDispatch();
