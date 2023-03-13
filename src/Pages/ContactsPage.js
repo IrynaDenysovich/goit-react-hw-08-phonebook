@@ -39,7 +39,7 @@ export function ContactsPage() {
         {contacts && !contactsIsLoading && (
           <Box sx={{ display: 'flex', width: '50%', flexDirection: 'column' }}>
             <PhonebookFilter />
-            <PhonebookList contacts={contacts} />
+            <PhonebookList />
           </Box>
         )}
         <PhonebookForm />

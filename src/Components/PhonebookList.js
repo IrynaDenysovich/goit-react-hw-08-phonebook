@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
-import { PhonebookSkeleton } from './PhonebookSkeleton';
 import { useDispatch, useSelector } from 'react-redux';
 import {
   selectorAddContactLoading,
   selectorAuthToken,
+  selectorContacts,
   selectorFilter,
   selectorRemoveContanctIndex,
 } from '../Reducers/Selectors';
@@ -18,11 +18,12 @@ import {
 import { predictRemove } from '../Reducers/ContactsSlice';
 import { contactsDelete } from '../Reducers/Api';
 import { PhonebookSkeletonList } from './PhonebookSkeletonList';
+import { PhonebookSkeleton } from './PhonebookSkeleton';
 import { PhonebookListItem } from './PhonebookListItem';
 import { ConfirmWindow } from './ConfirmWindow';
 import { useState } from 'react';
 
-export function PhonebookList({ contacts }) {
+export function PhonebookList() {
   const [confirmStatus, setConfirmStatus] = useState({ open: false });
 
   const dispatch = useDispatch();
@@ -30,6 +31,7 @@ export function PhonebookList({ contacts }) {
   const removeIndex = useSelector(selectorRemoveContanctIndex);
   const authToken = useSelector(selectorAuthToken);
   const filterValue = useSelector(selectorFilter);
+  const contacts = useSelector(selectorContacts);
 
   const deleteClickHandle = id => setConfirmStatus({ open: true, id: id });
 
@@ -84,13 +86,3 @@ export function PhonebookList({ contacts }) {
     </Box>
   );
 }
-
-PhonebookList.propTypes = {
-  contacts: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.string.isRequired,
-      name: PropTypes.string.isRequired,
-      number: PropTypes.string.isRequired,
-    })
-  ),
-};
